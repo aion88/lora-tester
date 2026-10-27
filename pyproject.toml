@@ -1,0 +1,21 @@
+[project]
+name = "lora-tester"
+version = "0.1.0"
+description = "Render a LoRA strength x prompt grid on a ComfyUI server and compare the results in a browser gallery. Tests LoRAs, does not train them."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+doctor = ["playwright>=1.40"]
+
+[dependency-groups]
+dev = ["pytest>=8"]
+
+[tool.uv]
+package = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
